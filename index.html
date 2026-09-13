@@ -3,12 +3,11 @@
      Naturaleza Abierta
      ========================================================= -->
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
 /* =========================================================
    VARIABLES EDITABLES
    ========================================================= */
+
 .jv-page {
     --oro: #b89452;
     --oro-claro: #d8bd7b;
@@ -23,34 +22,32 @@
     font-family: Georgia, "Times New Roman", serif;
     color: var(--texto);
     background: var(--crema);
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;
-}
-
-.jv-page * {
-    box-sizing: border-box;
 }
 
 /* =========================================================
    CONTENEDOR
    ========================================================= */
+
 .jv-container {
     width: min(1180px, 92%);
     margin: 0 auto;
 }
 
 /* =========================================================
-   HERO (VERSIÓN PC)
+   HERO
    ========================================================= */
+
 .jv-hero {
     min-height: 760px;
     background:
         linear-gradient(
             90deg,
             rgba(10,20,16,.96) 0%,
-            rgba(10,20,16,.78) 42%,
-            rgba(10,20,16,.30) 75%,
-            rgba(10,20,16,.10) 100%
+            rgba(10,20,16,.78) 38%,
+            rgba(10,20,16,.20) 75%,
+            rgba(10,20,16,.05) 100%
         ),
         url("https://www.naturalezaabierta.com/wp-content/uploads/2026/09/chamanica.png")
         center center / cover no-repeat;
@@ -63,78 +60,87 @@
 .jv-hero-content {
     width: min(1180px, 92%);
     margin: auto;
-    padding: 90px 0;
+    padding: 80px 0;
 }
 
 .jv-eyebrow {
     color: var(--oro-claro);
-    font-family: Arial, sans-serif;
     font-size: 14px;
     letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 22px;
 }
 
-/* NOMBRE AGRANDADO 50% EN PC */
 .jv-hero h1 {
     color: var(--blanco);
-    font-size: clamp(56px, 9vw, 130px);
-    line-height: .92;
+    font-size: clamp(48px, 7vw, 86px);
+    line-height: .95;
     font-weight: 400;
     margin: 0 0 25px;
-    max-width: 850px;
-    letter-spacing: -1.5px;
+    max-width: 650px;
 }
 
 .jv-hero h1 span {
     color: var(--oro-claro);
 }
 
+.jv-hero-subtitle {
+    color: rgba(255,255,255,.88);
+    font-size: clamp(19px, 2vw, 24px);
+    line-height: 1.65;
+    max-width: 620px;
+    margin-bottom: 38px;
+}
+
 .jv-divider {
-    width: 90px;
-    height: 2px;
+    width: 80px;
+    height: 1px;
     background: var(--oro);
     margin: 25px 0;
 }
 
-.jv-hero-subtitle {
-    color: rgba(255,255,255,.90);
-    font-size: clamp(20px, 2.2vw, 26px);
-    line-height: 1.65;
-    max-width: 650px;
-    margin-bottom: 38px;
-}
-
 /* =========================================================
-   BOTÓN PRINCIPAL (VERSIÓN PC)
+   BOTÓN PRINCIPAL
    ========================================================= */
+
 .jv-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: linear-gradient(135deg, #d6b96f, #a9823e);
+
+    background: linear-gradient(
+        135deg,
+        #d6b96f,
+        #a9823e
+    );
+
     color: #17150f !important;
     text-decoration: none !important;
-    padding: 19px 36px;
+
+    padding: 18px 32px;
     border-radius: 50px;
+
     font-family: Arial, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 1.2px;
     text-transform: uppercase;
-    box-shadow: 0 12px 35px rgba(0,0,0,.25);
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.22);
+
     transition: all .3s ease;
 }
 
 .jv-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 17px 40px rgba(0,0,0,.35);
+    box-shadow: 0 17px 40px rgba(0,0,0,.30);
 }
 
 /* =========================================================
    INTRODUCCIÓN
    ========================================================= */
+
 .jv-intro {
     background: var(--crema);
     padding: 100px 0;
@@ -142,7 +148,7 @@
 }
 
 .jv-intro-inner {
-    max-width: 840px;
+    max-width: 820px;
     margin: auto;
 }
 
@@ -151,7 +157,7 @@
     font-family: Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
 }
 
@@ -159,19 +165,20 @@
     color: var(--verde);
     font-size: clamp(34px, 5vw, 54px);
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.15;
     margin: 18px 0 30px;
 }
 
 .jv-intro p {
-    font-size: 21px;
-    line-height: 1.85;
-    color: #4a4843;
+    font-size: 20px;
+    line-height: 1.9;
+    color: #55534d;
 }
 
 /* =========================================================
    PARA QUIÉN ES
    ========================================================= */
+
 .jv-identificacion {
     background: #eee8dc;
     padding: 100px 0;
@@ -191,7 +198,7 @@
 }
 
 .jv-section-heading p {
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.8;
     color: var(--gris);
 }
@@ -199,14 +206,14 @@
 .jv-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 22px;
 }
 
 .jv-card {
-    background: rgba(255,255,255,.78);
-    padding: 38px 30px;
-    border-radius: 20px;
-    border: 1px solid rgba(184,148,82,.25);
+    background: rgba(255,255,255,.68);
+    padding: 35px 30px;
+    border-radius: 18px;
+    border: 1px solid rgba(184,148,82,.22);
     transition: transform .3s ease, box-shadow .3s ease;
 }
 
@@ -217,26 +224,28 @@
 
 .jv-card-icon {
     color: var(--oro);
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 18px;
 }
 
 .jv-card h3 {
     color: var(--verde);
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 400;
     margin: 0 0 14px;
 }
 
 .jv-card p {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.75;
-    color: #58564f;
+    color: #65635c;
     margin: 0;
 }
+
 /* =========================================================
    EXPERIENCIA
    ========================================================= */
+
 .jv-experiencia {
     background: var(--verde-profundo);
     color: white;
@@ -253,7 +262,7 @@
     font-weight: 400;
     text-align: center;
     margin: 15px auto 65px;
-    max-width: 820px;
+    max-width: 800px;
 }
 
 .jv-steps {
@@ -264,40 +273,40 @@
 
 .jv-step {
     text-align: center;
-    padding: 25px 15px;
+    padding: 25px;
     position: relative;
 }
 
 .jv-step-number {
-    width: 60px;
-    height: 60px;
-    border: 1.5px solid var(--oro);
+    width: 55px;
+    height: 55px;
+    border: 1px solid var(--oro);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
+
     color: var(--oro-claro);
     font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
 }
 
 .jv-step h3 {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 400;
     margin-bottom: 12px;
 }
 
 .jv-step p {
-    color: rgba(255,255,255,.75);
+    color: rgba(255,255,255,.65);
     line-height: 1.7;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 /* =========================================================
    FOTO ENTREVISTA
    ========================================================= */
+
 .jv-entrevista {
     background: var(--crema);
     padding: 110px 0;
@@ -326,7 +335,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 1.5px solid rgba(184,148,82,.45);
+    border: 1px solid rgba(184,148,82,.45);
     border-radius: 28px;
     top: 16px;
     left: 16px;
@@ -342,24 +351,29 @@
     color: var(--verde);
     font-size: clamp(35px, 5vw, 55px);
     font-weight: 400;
-    line-height: 1.18;
+    line-height: 1.15;
     margin: 0 0 25px;
 }
 
 .jv-entrevista-text p {
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.9;
-    color: #4f4d46;
+    color: #5e5c55;
 }
 
 /* =========================================================
    FRASE DESTACADA
    ========================================================= */
+
 .jv-quote {
     background:
-        linear-gradient(rgba(16,28,24,.88), rgba(16,28,24,.88)),
+        linear-gradient(
+            rgba(16,28,24,.88),
+            rgba(16,28,24,.88)
+        ),
         url("https://www.naturalezaabierta.com/wp-content/uploads/2026/09/chamanica.png")
         center 35% / cover no-repeat;
+
     padding: 110px 20px;
     text-align: center;
 }
@@ -368,16 +382,16 @@
     max-width: 850px;
     margin: auto;
     color: white;
-    font-size: clamp(28px, 4vw, 45px);
-    line-height: 1.5;
+    font-size: clamp(27px, 4vw, 45px);
+    line-height: 1.45;
     font-style: italic;
     font-weight: 400;
 }
 
 .jv-quote span {
     display: block;
-    width: 70px;
-    height: 2px;
+    width: 60px;
+    height: 1px;
     background: var(--oro);
     margin: 30px auto 0;
 }
@@ -385,6 +399,7 @@
 /* =========================================================
    OFERTA
    ========================================================= */
+
 .jv-offer {
     background: var(--crema);
     padding: 110px 0;
@@ -414,29 +429,30 @@
 
 .jv-duration {
     font-family: Arial, sans-serif;
-    color: #6f6b63;
-    font-size: 16px;
+    color: #77736b;
+    font-size: 15px;
     margin-bottom: 25px;
 }
 
 .jv-price {
     color: var(--verde);
     font-family: Arial, sans-serif;
-    font-size: 62px;
+    font-size: 55px;
     font-weight: 700;
     margin: 10px 0 30px;
 }
 
 .jv-offer-description {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.75;
-    color: #5a5851;
+    color: #66635b;
     margin-bottom: 30px;
 }
 
 /* =========================================================
    MÉTODOS DE PAGO
    ========================================================= */
+
 .jv-payment {
     margin-top: 35px;
     padding-top: 30px;
@@ -447,7 +463,7 @@
     font-family: Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     color: #88847a;
     margin-bottom: 18px;
@@ -464,6 +480,7 @@
 /* =========================================================
    CIERRE
    ========================================================= */
+
 .jv-final {
     background: var(--verde);
     padding: 100px 20px;
@@ -476,14 +493,14 @@
     font-weight: 400;
     max-width: 850px;
     margin: 0 auto 25px;
-    line-height: 1.25;
+    line-height: 1.2;
 }
 
 .jv-final p {
-    color: rgba(255,255,255,.80);
+    color: rgba(255,255,255,.72);
     max-width: 650px;
     margin: 0 auto 35px;
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.8;
 }
 
@@ -494,13 +511,14 @@
 /* =========================================================
    FOOTER
    ========================================================= */
+
 .jv-footer {
     background: #0b1511;
-    color: rgba(255,255,255,.6);
+    color: rgba(255,255,255,.5);
     text-align: center;
-    padding: 30px 15px;
+    padding: 28px 15px;
     font-family: Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .jv-footer strong {
@@ -508,182 +526,480 @@
 }
 
 /* =========================================================
-   RESPONSIVE MÓVIL Y TABLET OPTIMIZADO
+   RESPONSIVE TABLET
    ========================================================= */
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
+
+    .jv-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .jv-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jv-entrevista-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .jv-entrevista-text {
+        text-align: center;
+    }
+
+    .jv-entrevista-text .jv-small-title {
+        display: block;
+    }
+
+    .jv-entrevista-image {
+        max-width: 700px;
+        margin: auto;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE MÓVIL
+   ========================================================= */
+
+<style>
+
+/* =========================================================
+   VERSION MOVIL · JOSÉ VEGAS
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .jv-page {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .jv-container {
+        width: 92%;
+        max-width: none;
+    }
+
+    /* =========================
+       HERO
+       ========================= */
+
     .jv-hero {
-        min-height: 680px;
+        min-height: 780px;
+        width: 100%;
+
         background:
             linear-gradient(
                 180deg,
-                rgba(10,20,16,.20) 0%,
-                rgba(10,20,16,.68) 45%,
-                rgba(10,20,16,.96) 100%
+                rgba(8,18,14,.05) 0%,
+                rgba(8,18,14,.20) 28%,
+                rgba(8,18,14,.78) 62%,
+                rgba(8,18,14,.97) 100%
             ),
             url("https://www.naturalezaabierta.com/wp-content/uploads/2026/09/chamanica.png")
-            50% top / cover no-repeat;
+            center center / cover no-repeat;
+
+        display: flex;
         align-items: flex-end;
     }
 
     .jv-hero-content {
-        padding: 50px 0 60px;
+        width: 92%;
+        padding: 60px 0 55px;
+        margin: 0 auto;
         text-align: center;
     }
 
     .jv-eyebrow {
         font-size: 12px;
+        line-height: 1.5;
         letter-spacing: 2.5px;
-        margin-bottom: 16px;
-    }
-
-    /* Nombre protagonista en móvil */
-    .jv-hero h1 {
-        font-size: 64px !important;
-        line-height: 0.95;
         margin-bottom: 18px;
     }
 
-    .jv-hero-subtitle {
-        font-size: 20px !important;
-        line-height: 1.6;
-        margin-bottom: 28px;
+    .jv-hero h1 {
+        font-size: 62px;
+        line-height: .95;
+        margin: 0 auto 22px;
+        max-width: 100%;
     }
 
     .jv-divider {
-        margin: 20px auto;
+        width: 65px;
+        margin: 20px auto 25px;
     }
+
+    .jv-hero-subtitle {
+        font-size: 19px;
+        line-height: 1.65;
+        max-width: 100%;
+        margin: 0 auto 32px;
+    }
+
+    /* BOTONES */
 
     .jv-button {
         width: 100%;
-        max-width: 360px;
-        padding: 18px 22px;
-        font-size: 14px;
+        max-width: 370px;
+        min-height: 58px;
+
+        padding: 17px 18px;
+
+        border-radius: 50px;
+
+        font-size: 13px;
+        line-height: 1.3;
+        letter-spacing: 1px;
+
+        box-sizing: border-box;
     }
 
-    /* Secciones generales */
-    .jv-intro,
-    .jv-identificacion,
-    .jv-experiencia,
-    .jv-entrevista,
-    .jv-offer {
-        padding: 70px 0;
+
+    /* =========================
+       INTRO
+       ========================= */
+
+    .jv-intro {
+        padding: 85px 0;
+    }
+
+    .jv-intro-inner {
+        width: 100%;
     }
 
     .jv-small-title {
-        font-size: 13px;
+        font-size: 12px;
+        letter-spacing: 2.5px;
+        line-height: 1.5;
     }
 
-    .jv-intro h2,
-    .jv-section-heading h2,
-    .jv-experiencia h2,
-    .jv-entrevista-text h2,
-    .jv-final h2 {
-        font-size: 32px !important;
-        line-height: 1.25;
+    .jv-intro h2 {
+        font-size: 39px;
+        line-height: 1.18;
+        margin: 18px 0 28px;
     }
 
-    .jv-intro p,
-    .jv-section-heading p,
-    .jv-entrevista-text p,
-    .jv-offer-description,
-    .jv-final p {
-        font-size: 19px !important;
-        line-height: 1.75;
+    .jv-intro p {
+        font-size: 18px;
+        line-height: 1.85;
     }
 
-    /* Tarjetas apiladas legibles */
+
+    /* =========================
+       IDENTIFICACION
+       ========================= */
+
+    .jv-identificacion {
+        padding: 85px 0;
+    }
+
+    .jv-section-heading {
+        width: 100%;
+        margin-bottom: 42px;
+    }
+
+    .jv-section-heading h2 {
+        font-size: 39px;
+        line-height: 1.18;
+        margin: 16px 0 22px;
+    }
+
+    .jv-section-heading p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
     .jv-cards {
+        display: grid;
         grid-template-columns: 1fr;
         gap: 18px;
     }
 
     .jv-card {
-        padding: 30px 24px;
+        padding: 32px 26px;
+        border-radius: 20px;
+    }
+
+    .jv-card-icon {
+        font-size: 34px;
+        margin-bottom: 18px;
     }
 
     .jv-card h3 {
-        font-size: 22px;
+        font-size: 24px;
+        line-height: 1.25;
+        margin-bottom: 14px;
     }
 
     .jv-card p {
         font-size: 17px;
+        line-height: 1.8;
     }
 
-    /* Pasos en 2 columnas en lugar de 4 apretados */
+
+    /* =========================
+       EXPERIENCIA
+       ========================= */
+
+    .jv-experiencia {
+        padding: 90px 0;
+    }
+
+    .jv-experiencia h2 {
+        font-size: 39px;
+        line-height: 1.18;
+        margin: 16px auto 50px;
+    }
+
     .jv-steps {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 35px;
     }
 
     .jv-step {
-        padding: 15px 8px;
+        padding: 5px 15px;
+    }
+
+    .jv-step-number {
+        width: 58px;
+        height: 58px;
+        font-size: 14px;
+        margin-bottom: 18px;
     }
 
     .jv-step h3 {
-        font-size: 19px;
+        font-size: 24px;
+        margin-bottom: 10px;
     }
 
     .jv-step p {
-        font-size: 15px;
+        font-size: 17px;
+        line-height: 1.75;
     }
 
-    /* Entrevista */
+
+    /* =========================
+       FOTO ENTREVISTA
+       ========================= */
+
+    .jv-entrevista {
+        padding: 85px 0;
+    }
+
     .jv-entrevista-grid {
+        display: grid;
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 55px;
+    }
+
+    .jv-entrevista-image {
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    .jv-entrevista-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 24px;
+    }
+
+    .jv-entrevista-image::after {
+        top: 10px;
+        left: 10px;
+        border-radius: 24px;
     }
 
     .jv-entrevista-text {
         text-align: left;
     }
 
-    .jv-entrevista-image::after {
-        top: 10px;
-        left: 10px;
+    .jv-entrevista-text h2 {
+        font-size: 39px;
+        line-height: 1.18;
+        margin: 15px 0 25px;
     }
 
-    /* Frase */
+    .jv-entrevista-text p {
+        font-size: 18px;
+        line-height: 1.85;
+        margin-bottom: 22px;
+    }
+
+
+    /* =========================
+       FRASE
+       ========================= */
+
     .jv-quote {
-        padding: 85px 22px;
+        padding: 90px 25px;
+
+        background:
+            linear-gradient(
+                rgba(10,20,16,.87),
+                rgba(10,20,16,.92)
+            ),
+            url("https://www.naturalezaabierta.com/wp-content/uploads/2026/09/chamanica.png")
+            center center / cover no-repeat;
     }
 
     .jv-quote p {
-        font-size: 27px !important;
-        line-height: 1.5;
+        font-size: 29px;
+        line-height: 1.45;
     }
 
-    /* Caja de oferta */
+    .jv-quote span {
+        margin-top: 28px;
+    }
+
+
+    /* =========================
+       OFERTA
+       ========================= */
+
+    .jv-offer {
+        padding: 85px 0;
+    }
+
     .jv-offer-box {
+        width: 100%;
+        box-sizing: border-box;
+
         padding: 45px 22px;
-        border-radius: 22px;
+
+        border-radius: 24px;
     }
 
     .jv-offer-box h2 {
-        font-size: 34px;
+        font-size: 38px;
+        line-height: 1.15;
+        margin: 16px 0 10px;
     }
 
     .jv-duration {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.5;
     }
 
     .jv-price {
-        font-size: 56px;
+        font-size: 58px;
+        line-height: 1;
+        margin: 18px 0 28px;
+    }
+
+    .jv-offer-description {
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+
+    /* =========================
+       METODOS DE PAGO
+       ========================= */
+
+    .jv-payment {
+        margin-top: 38px;
+        padding-top: 30px;
     }
 
     .jv-payment-title {
-        font-size: 12px;
+        font-size: 11px;
+        line-height: 1.5;
+        letter-spacing: 1.8px;
+        margin-bottom: 18px;
     }
+
+    .jv-payment img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+    }
+
+
+    /* =========================
+       CIERRE
+       ========================= */
+
+    .jv-final {
+        padding: 85px 20px;
+    }
+
+    .jv-final h2 {
+        font-size: 40px;
+        line-height: 1.18;
+        margin-bottom: 25px;
+    }
+
+    .jv-final p {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 32px;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    .jv-footer {
+        padding: 28px 15px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
 }
+
+
+/* =========================================================
+   TELEFONOS MUY PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .jv-hero {
+        min-height: 740px;
+    }
+
+    .jv-hero h1 {
+        font-size: 54px;
+    }
+
+    .jv-hero-subtitle {
+        font-size: 18px;
+    }
+
+    .jv-intro h2,
+    .jv-section-heading h2,
+    .jv-experiencia h2,
+    .jv-entrevista-text h2 {
+        font-size: 35px;
+    }
+
+    .jv-final h2 {
+        font-size: 36px;
+    }
+
+}
+
 </style>
+</style>
+
 
 <!-- =========================================================
      CONTENIDO
      ========================================================= -->
+
 <div class="jv-page">
 
     <!-- HERO -->
     <section class="jv-hero">
+
         <div class="jv-hero-content">
+
             <div class="jv-eyebrow">
                 Naturaleza Abierta · Espacio de acompañamiento
             </div>
@@ -707,13 +1023,19 @@
             >
                 Reservar mi sesión · $25
             </a>
+
         </div>
+
     </section>
+
 
     <!-- INTRO -->
     <section class="jv-intro">
+
         <div class="jv-container">
+
             <div class="jv-intro-inner">
+
                 <div class="jv-small-title">
                     Un espacio para ti
                 </div>
@@ -730,14 +1052,21 @@
                     expresar lo que estás viviendo y explorar aquello que
                     puede estar pidiendo tu atención.
                 </p>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- IDENTIFICACIÓN -->
     <section class="jv-identificacion">
+
         <div class="jv-container">
+
             <div class="jv-section-heading">
+
                 <div class="jv-small-title">
                     Quizás este espacio sea para ti
                 </div>
@@ -751,45 +1080,74 @@
                     Puedes llegar simplemente con aquello que hoy
                     necesitas conversar.
                 </p>
+
             </div>
 
+
             <div class="jv-cards">
+
                 <div class="jv-card">
+
                     <div class="jv-card-icon">◌</div>
-                    <h3>Cuando tienes preguntas</h3>
+
+                    <h3>
+                        Cuando tienes preguntas
+                    </h3>
+
                     <p>
                         Hay situaciones personales, familiares o de pareja
                         que pueden resultar difíciles de comprender cuando
                         estamos demasiado cerca de ellas.
                     </p>
+
                 </div>
 
+
                 <div class="jv-card">
+
                     <div class="jv-card-icon">✧</div>
-                    <h3>Cuando necesitas otra perspectiva</h3>
+
+                    <h3>
+                        Cuando necesitas otra perspectiva
+                    </h3>
+
                     <p>
                         Conversar con alguien desde una mirada diferente
                         puede ayudarte a ordenar pensamientos y observar
                         una situación desde nuevos ángulos.
                     </p>
+
                 </div>
 
+
                 <div class="jv-card">
+
                     <div class="jv-card-icon">∞</div>
-                    <h3>Cuando quieres reconectar contigo</h3>
+
+                    <h3>
+                        Cuando quieres reconectar contigo
+                    </h3>
+
                     <p>
                         También puede ser un momento para detenerte,
                         escucharte y prestar atención a aquello que has
                         estado dejando de lado.
                     </p>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- EXPERIENCIA -->
     <section class="jv-experiencia">
+
         <div class="jv-container">
+
             <div class="jv-small-title" style="text-align:center;">
                 La experiencia
             </div>
@@ -798,46 +1156,106 @@
                 Un encuentro. Una conversación. Un espacio para mirar hacia dentro.
             </h2>
 
+
             <div class="jv-steps">
-                <div class="jv-step">
-                    <div class="jv-step-number">01</div>
-                    <h3>Escuchar</h3>
-                    <p>Comenzamos por aquello que estás viviendo y por aquello que deseas compartir.</p>
-                </div>
 
                 <div class="jv-step">
-                    <div class="jv-step-number">02</div>
-                    <h3>Comprender</h3>
-                    <p>Exploramos juntos los elementos que pueden estar influyendo en tu situación actual.</p>
+
+                    <div class="jv-step-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Escuchar
+                    </h3>
+
+                    <p>
+                        Comenzamos por aquello que estás viviendo y por
+                        aquello que deseas compartir.
+                    </p>
+
                 </div>
 
-                <div class="jv-step">
-                    <div class="jv-step-number">03</div>
-                    <h3>Explorar</h3>
-                    <p>Abrimos espacio para nuevas preguntas, perspectivas y posibilidades.</p>
-                </div>
 
                 <div class="jv-step">
-                    <div class="jv-step-number">04</div>
-                    <h3>Orientar</h3>
-                    <p>Cerramos el encuentro integrando aquello que haya surgido durante la conversación.</p>
+
+                    <div class="jv-step-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Comprender
+                    </h3>
+
+                    <p>
+                        Exploramos juntos los elementos que pueden estar
+                        influyendo en tu situación actual.
+                    </p>
+
                 </div>
+
+
+                <div class="jv-step">
+
+                    <div class="jv-step-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Explorar
+                    </h3>
+
+                    <p>
+                        Abrimos espacio para nuevas preguntas, perspectivas
+                        y posibilidades.
+                    </p>
+
+                </div>
+
+
+                <div class="jv-step">
+
+                    <div class="jv-step-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Orientar
+                    </h3>
+
+                    <p>
+                        Cerramos el encuentro integrando aquello que haya
+                        surgido durante la conversación.
+                    </p>
+
+                </div>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- ENTREVISTA -->
     <section class="jv-entrevista">
+
         <div class="jv-container">
+
             <div class="jv-entrevista-grid">
+
                 <div class="jv-entrevista-image">
+
                     <img
                         src="https://www.naturalezaabierta.com/wp-content/uploads/2026/09/entrevista.png"
                         alt="José Vegas durante una entrevista"
                     >
+
                 </div>
 
+
                 <div class="jv-entrevista-text">
+
                     <div class="jv-small-title">
                         Conoce a José
                     </div>
@@ -863,29 +1281,43 @@
                         pensado para que puedas hablar con libertad sobre
                         aquello que hoy ocupa un lugar importante en tu vida.
                     </p>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- FRASE -->
     <section class="jv-quote">
+
         <p>
             “A veces no necesitamos tener todas las respuestas.
             Necesitamos un espacio donde podamos comenzar a encontrarlas.”
         </p>
+
         <span></span>
+
     </section>
+
 
     <!-- OFERTA -->
     <section class="jv-offer">
+
         <div class="jv-container">
+
             <div class="jv-offer-box">
+
                 <div class="jv-small-title">
                     Reserva tu espacio
                 </div>
 
-                <h2>Sesión personalizada</h2>
+                <h2>
+                    Sesión personalizada
+                </h2>
 
                 <div class="jv-duration">
                     Sesión telefónica · 50 minutos
@@ -900,6 +1332,8 @@
                     conversar directamente con José Vegas.
                 </p>
 
+
+                <!-- BOTÓN DE COMPRA -->
                 <a
                     class="jv-button"
                     href="https://www.naturalezaabierta.com/finalizar-compra/?add-to-cart=4629"
@@ -907,7 +1341,10 @@
                     Quiero reservar mi sesión
                 </a>
 
+
+                <!-- MÉTODOS DE PAGO -->
                 <div class="jv-payment">
+
                     <div class="jv-payment-title">
                         Métodos de pago disponibles
                     </div>
@@ -916,14 +1353,21 @@
                         src="https://www.naturalezaabierta.com/wp-content/uploads/2026/09/pagos-metodos3-scaled.png"
                         alt="Métodos de pago Naturaleza Abierta"
                     >
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- CIERRE -->
     <section class="jv-final">
+
         <div class="jv-container">
+
             <h2>
                 Tal vez este sea el momento de escucharte.
             </h2>
@@ -940,12 +1384,18 @@
             >
                 Reservar mi sesión · $25
             </a>
+
         </div>
+
     </section>
+
 
     <!-- FOOTER -->
     <footer class="jv-footer">
-        Naturaleza Abierta · <strong>José Vegas</strong>
+
+        Naturaleza Abierta ·
+        <strong>José Vegas</strong>
+
     </footer>
 
 </div>
