@@ -40,7 +40,7 @@
 }
 
 /* =========================================================
-   HERO
+   HERO (PC)
    ========================================================= */
 .jv-hero {
     min-height: 760px;
@@ -75,7 +75,7 @@
     margin-bottom: 22px;
 }
 
-/* NOMBRE AGRANDADO 50% EN PC */
+/* NOMBRE EN PC */
 .jv-hero h1 {
     color: var(--blanco);
     font-size: clamp(56px, 9vw, 130px);
@@ -106,7 +106,7 @@
 }
 
 /* =========================================================
-   BOTÓN PRINCIPAL
+   BOTONES GLOBALES
    ========================================================= */
 .jv-button {
     display: inline-flex;
@@ -509,69 +509,114 @@
 }
 
 /* =========================================================
-   RESPONSIVE MÓVIL Y TABLET OPTIMIZADO
+   RESPONSIVE MÓVIL Y TABLET (HASTA 768px)
    ========================================================= */
 @media (max-width: 768px) {
+
+    /* SECCIÓN HERO EN MÓVIL */
     .jv-hero {
-        min-height: 680px;
+        min-height: 800px;
+        height: 800px;
         background:
             linear-gradient(
                 180deg,
-                rgba(10,20,16,.20) 0%,
-                rgba(10,20,16,.68) 45%,
-                rgba(10,20,16,.96) 100%
+                rgba(10,20,16,.08) 0%,
+                rgba(10,20,16,.40) 42%,
+                rgba(10,20,16,.85) 65%,
+                rgba(10,20,16,.98) 92%
             ),
             url("https://www.naturalezaabierta.com/wp-content/uploads/2026/09/chamanica.png")
-            50% top / cover no-repeat;
-        align-items: flex-end;
+            center top / cover no-repeat;
+        align-items: flex-start;
     }
 
     .jv-hero-content {
-        padding: 50px 0 60px;
+        width: 90%;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
         text-align: center;
     }
 
     .jv-eyebrow {
-        font-size: 12px;
-        letter-spacing: 2.5px;
-        margin-bottom: 16px;
+        margin-top: 42px;
+        margin-bottom: 12px;
+        font-size: 11px;
+        letter-spacing: 2px;
     }
 
-    /* Nombre protagonista en móvil */
+    /* NOMBRE Y APELLIDO EN UNA SOLA LÍNEA (SIN TAPAR EL ROSTRO) */
     .jv-hero h1 {
-        font-size: 64px !important;
-        line-height: 0.95;
-        margin-bottom: 18px;
+        font-size: 38px !important;
+        line-height: 1.1 !important;
+        margin: 0 auto 12px !important;
+        white-space: nowrap;
+        max-width: 100%;
     }
 
-    .jv-hero-subtitle {
-        font-size: 20px !important;
-        line-height: 1.6;
-        margin-bottom: 28px;
+    /* Ocultar el salto de línea para que quede "José Vegas" horizontal */
+    .jv-hero h1 br {
+        display: none;
+    }
+
+    .jv-hero h1 span {
+        margin-left: 8px;
     }
 
     .jv-divider {
-        margin: 20px auto;
+        width: 55px;
+        margin: 10px auto 0;
     }
 
-    .jv-button {
-        width: 100%;
-        max-width: 360px;
-        padding: 18px 22px;
-        font-size: 14px;
+    /* PÁRRAFO INFERIOR */
+    .jv-hero-subtitle {
+        position: absolute;
+        left: 50%;
+        bottom: 125px;
+        transform: translateX(-50%);
+        width: 92%;
+        max-width: 370px;
+        margin: 0;
+        font-size: 17px !important;
+        line-height: 1.55;
+        text-align: center;
     }
 
-    /* Secciones generales */
+    /* BOTÓN ÚNICAMENTE DEL HERO EN ABSOLUTO */
+    .jv-hero .jv-button {
+        position: absolute;
+        left: 50%;
+        bottom: 42px;
+        transform: translateX(-50%);
+        width: 92%;
+        max-width: 350px;
+        padding: 17px 20px;
+        font-size: 13px;
+        z-index: 10;
+    }
+
+    /* BOTONES DE OTRAS SECCIONES EN MÓVIL (FLUJO NORMAL) */
+    .jv-offer-box .jv-button,
+    .jv-final .jv-button {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 15px auto 0 !important;
+        display: inline-flex !important;
+    }
+
+    /* SECCIONES RESTANTES */
     .jv-intro,
     .jv-identificacion,
     .jv-experiencia,
     .jv-entrevista,
     .jv-offer {
         padding: 70px 0;
-    }
-
-    .jv-small-title {
-        font-size: 13px;
     }
 
     .jv-intro h2,
@@ -588,11 +633,10 @@
     .jv-entrevista-text p,
     .jv-offer-description,
     .jv-final p {
-        font-size: 19px !important;
+        font-size: 18px !important;
         line-height: 1.75;
     }
 
-    /* Tarjetas apiladas legibles */
     .jv-cards {
         grid-template-columns: 1fr;
         gap: 18px;
@@ -610,7 +654,6 @@
         font-size: 17px;
     }
 
-    /* Pasos en 2 columnas en lugar de 4 apretados */
     .jv-steps {
         grid-template-columns: repeat(2, 1fr);
         gap: 18px;
@@ -628,7 +671,6 @@
         font-size: 15px;
     }
 
-    /* Entrevista */
     .jv-entrevista-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -638,22 +680,15 @@
         text-align: left;
     }
 
-    .jv-entrevista-image::after {
-        top: 10px;
-        left: 10px;
-    }
-
-    /* Frase */
     .jv-quote {
         padding: 85px 22px;
     }
 
     .jv-quote p {
-        font-size: 27px !important;
+        font-size: 26px !important;
         line-height: 1.5;
     }
 
-    /* Caja de oferta */
     .jv-offer-box {
         padding: 45px 22px;
         border-radius: 22px;
@@ -663,196 +698,28 @@
         font-size: 34px;
     }
 
-    .jv-duration {
-        font-size: 16px;
-    }
-
     .jv-price {
-        font-size: 56px;
+        font-size: 54px;
     }
+}
 
-    .jv-payment-title {
+/* AJUSTE PARA PANTALLAS MUY PEQUEÑAS */
+@media (max-width: 380px) {
+    .jv-hero h1 {
+        font-size: 32px !important;
+    }
+    .jv-hero-subtitle {
+        bottom: 115px;
+        font-size: 15px !important;
+    }
+    .jv-hero .jv-button {
+        bottom: 34px;
+        padding: 15px 16px;
         font-size: 12px;
     }
 }
-</style> 
-
-
-<style>
-
-/* =====================================================
-   AJUSTE DEFINITIVO PORTADA MOVIL
-   NOMBRE FUERA DEL ROSTRO
-   ===================================================== */
-
-@media (max-width: 600px) {
-
-    .jv-hero {
-        min-height: 820px !important;
-        height: 820px !important;
-
-        /* Reencuadre de José */
-        background-position: center top !important;
-        background-size: cover !important;
-    }
-
-    .jv-hero-content {
-        width: 90% !important;
-        height: 100% !important;
-
-        padding: 0 !important;
-
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-
-        justify-content: flex-start !important;
-
-        position: relative !important;
-    }
-
-    /* =================================================
-       FRASE SUPERIOR
-       ================================================= */
-
-    .jv-eyebrow {
-        margin-top: 48px !important;
-        margin-bottom: 18px !important;
-
-        font-size: 11px !important;
-        letter-spacing: 2.2px !important;
-        line-height: 1.5 !important;
-
-        position: relative !important;
-        z-index: 10 !important;
-    }
-
-
-    /* =================================================
-       NOMBRE
-       Lo colocamos arriba, fuera del rostro
-       ================================================= */
-
-    .jv-hero h1 {
-        font-size: 54px !important;
-        line-height: .88 !important;
-
-        max-width: 330px !important;
-
-        margin: 0 auto !important;
-
-        text-align: center !important;
-
-        position: relative !important;
-        z-index: 10 !important;
-
-        transform: translateY(0) !important;
-    }
-
-
-    /* =================================================
-       LÍNEA DORADA
-       ================================================= */
-
-    .jv-divider {
-        width: 65px !important;
-
-        margin: 18px auto 0 !important;
-
-        position: relative !important;
-        z-index: 10 !important;
-    }
-
-
-    /* =================================================
-       TEXTO
-       Lo llevamos hacia la parte inferior
-       ================================================= */
-
-    .jv-hero-subtitle {
-        position: absolute !important;
-
-        left: 50% !important;
-        bottom: 135px !important;
-
-        transform: translateX(-50%) !important;
-
-        width: 90% !important;
-        max-width: 360px !important;
-
-        margin: 0 !important;
-
-        font-size: 18px !important;
-        line-height: 1.52 !important;
-
-        text-align: center !important;
-
-        z-index: 10 !important;
-    }
-
-
-    /* =================================================
-       BOTÓN
-       ================================================= */
-
-    .jv-button {
-        position: absolute !important;
-
-        left: 50% !important;
-        bottom: 48px !important;
-
-        transform: translateX(-50%) !important;
-
-        width: 90% !important;
-        max-width: 360px !important;
-
-        min-height: 60px !important;
-
-        padding: 17px 15px !important;
-
-        font-size: 13px !important;
-        letter-spacing: 1px !important;
-
-        z-index: 20 !important;
-    }
-
-}
-
-
-/* =====================================================
-   TELEFONOS PEQUEÑOS
-   ===================================================== */
-
-@media (max-width: 380px) {
-
-    .jv-hero {
-        min-height: 760px !important;
-        height: 760px !important;
-
-        background-position: center top !important;
-    }
-
-    .jv-eyebrow {
-        margin-top: 38px !important;
-        font-size: 10px !important;
-    }
-
-    .jv-hero h1 {
-        font-size: 48px !important;
-    }
-
-    .jv-hero-subtitle {
-        bottom: 125px !important;
-        font-size: 17px !important;
-    }
-
-    .jv-button {
-        bottom: 38px !important;
-    }
-
-}
-
 </style>
+
 <!-- =========================================================
      CONTENIDO
      ========================================================= -->
