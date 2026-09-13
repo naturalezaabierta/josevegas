@@ -43,89 +43,64 @@
    HERO
    ========================================================= */
 .jv-hero {
-    min-height: 760px;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(10,20,16,.96) 0%,
-            rgba(10,20,16,.78) 42%,
-            rgba(10,20,16,.30) 75%,
-            rgba(10,20,16,.10) 100%
-        ),
-        url("https://www.naturalezaabierta.com/wp-content/uploads/2026/09/chamanica.png")
-        center center / cover no-repeat;
+        min-height: 720px;
+        background:
+            linear-gradient(
+                180deg,
+                rgba(10,20,16,0.05) 0%,
+                rgba(10,20,16,0.35) 38%,
+                rgba(10,20,16,0.85) 60%,
+                rgba(10,20,16,0.98) 90%
+            ),
+            url("https://www.naturalezaabierta.com/wp-content/uploads/2026/09/chamanica.png")
+            center top / cover no-repeat;
+        align-items: flex-end;
+    }
 
-    display: flex;
-    align-items: center;
-    position: relative;
-}
+    .jv-hero-content {
+        padding: 0 0 45px;
+        text-align: left;
+    }
 
-.jv-hero-content {
-    width: min(1180px, 92%);
-    margin: auto;
-    padding: 90px 0;
-}
-
-.jv-eyebrow {
-    color: var(--oro-claro);
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 22px;
-}
+    .jv-eyebrow {
+        font-size: 11px;
+        letter-spacing: 2.5px;
+        margin-bottom: 12px;
+    }
 
 /* NOMBRE AGRANDADO 50% EN PC */
-.jv-hero h1 {
-    color: var(--blanco);
-    font-size: clamp(56px, 9vw, 130px);
-    line-height: .92;
-    font-weight: 400;
-    margin: 0 0 25px;
-    max-width: 850px;
-    letter-spacing: -1.5px;
-}
+/* Nombre más compacto y fuera de la cara */
+    .jv-hero h1 {
+        font-size: 42px !important;
+        line-height: 1.05;
+        margin-bottom: 14px;
+        text-align: left;
+    }
 
 .jv-hero h1 span {
     color: var(--oro-claro);
 }
 
-.jv-hero-subtitle {
-    color: rgba(255,255,255,.90);
-    font-size: clamp(20px, 2.2vw, 26px);
-    line-height: 1.65;
-    max-width: 650px;
-    margin-bottom: 38px;
-}
-
 .jv-divider {
-    width: 90px;
-    height: 2px;
-    background: var(--oro);
-    margin: 25px 0;
-}
+        margin: 14px 0 18px 0;
+    }
+
+    .jv-hero-subtitle {
+        font-size: 16px !important;
+        line-height: 1.55;
+        margin-bottom: 24px;
+        text-align: left;
+    }
 
 /* =========================================================
    BOTÓN PRINCIPAL
    ========================================================= */
 .jv-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: linear-gradient(135deg, #d6b96f, #a9823e);
-    color: #17150f !important;
-    text-decoration: none !important;
-    padding: 19px 36px;
-    border-radius: 50px;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    box-shadow: 0 12px 35px rgba(0,0,0,.25);
-    transition: all .3s ease;
-}
+        width: 100%;
+        max-width: 320px;
+        padding: 16px 22px;
+        font-size: 13px;
+    }
 
 .jv-button:hover {
     transform: translateY(-3px);
